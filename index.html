@@ -17,13 +17,13 @@
     <meta name="author" content="Alexander Melkikh">
     <meta name="yandex-verification" content="6d3677b94d6c4e1f" />
     <meta name="google-site-verification" content="alF2RwaCM0piX8VB5xCEMuITYbvnjASvnK29Duwg4NU" />
-    <script src="https://cdn.jsdelivr.net/npm/typeit@5.10.7/dist/typeit.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@6.0.3/dist/typeit.min.js"></script>
     <style type="text/css">
         body {
             background-color: #272727;
             padding: 10px;
         }
-        .whoami {
+        .cli {
             color: #9CD9F0;
             position: relative;
             margin-left: 1em;
@@ -39,14 +39,20 @@
     </style>
 </head>
 <body>
-<div class="whoami">$</div>
-<script type="text/javascript" >
-    whoami = `Alexander Melkikh&nbsp;
-    <a href="https://twitter.com/lkikhme" target="_blank">@lkikhme</a>
-    `
+<div class="cli">$ </div>
+<div id="info" hidden="true">
+    <b>Alexander Melkikh</b>
+    <p>Application Security Engineer at Yandex</p>
+    twitter/<a href="https://twitter.com/lkikhme" target="_blank">lkikhme</a><br>
+    github/<a href="https://github.com/melkikh" target="_blank">melkikh</a><br>
+    linkedin/<a href="https://www.linkedin.com/in/melkikh/" target="_blank">melkikh</a><br>
+</div>
 
-    typer = new TypeIt('.whoami', {
-        speed: 200
+<script type="text/javascript">
+    info = document.querySelector("div#info").innerHTML
+
+    typer = new TypeIt('.cli', {
+        speed: 160
     })
     .pause(1000)
     .type(" whoami")
@@ -55,9 +61,12 @@
         "speed": 0,
         "html": true
     })
-    .type(whoami)
+    .type(info)
     .break()
     .type("$")
+    .go()
+
+    
 </script>
 <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(52057677, "init", { id:52057677, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/52057677" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
